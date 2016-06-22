@@ -1,17 +1,7 @@
 Rails.application.routes.draw do
   root 'leaders#index'
 
-  get 'leaders/obama'
-
-  get 'leaders/clinton'
-
-  get 'leaders/jfk'
-
-  get 'leaders/lincoln'
-
-  get 'leaders/churchill'
-
-  get 'leaders/:id', to: 'leaders#show'
+  get 'leaders/:id', to: 'leaders#show', as: "leaders"
 
   get '/about', to: 'static#about'
 

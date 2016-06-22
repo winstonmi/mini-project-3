@@ -11,11 +11,11 @@
   <body>
 
     <%= link_to "Home", root_path %>
-    <%= link_to "Obama", '/presidents/obama' %>
-    <%= link_to "Clinton", '/presidents/clinton' %>
-    <%= link_to "JFK", '/presidents/jfk' %>
-    <%= link_to "Lincoln", '/presidents/lincoln' %>
-    <%= link_to "Churchill", '/presidents/churchill' %>
+    <%= link_to "Obama", leaders_path(id:"Obama")%>
+    <%= link_to "Clinton", leaders_path(id:"Clinton")%>
+    <%= link_to "JFK", leaders_path(id:"JFK")%>
+    <%= link_to "Lincoln", leaders_path(id:"Lincoln")%>
+    <%= link_to "Churchill", leaders_path(id:"Churchill")%>
     <%= link_to "About", about_path %>
     <%= link_to "FAQ", faq_path %>
     <%= yield %>
