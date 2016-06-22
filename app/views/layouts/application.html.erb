@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Presidents</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <%= link_to "Home", root_path %>
+    <%= link_to "Obama", '/presidents/obama' %>
+    <%= link_to "Clinton", '/presidents/clinton' %>
+    <%= link_to "JFK", '/presidents/jfk' %>
+    <%= link_to "Lincoln", '/presidents/lincoln' %>
+    <%= link_to "Churchill", '/presidents/churchill' %>
+    <%= link_to "About", about_path %>
+    <%= link_to "FAQ", faq_path %>
+    <%= yield %>
+
+  </body>
+</html>
