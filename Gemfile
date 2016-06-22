@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 # Use sqlite3 as the database for Active Record
 
-gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -49,5 +48,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :productions do
 gem  'rails_12factor'
-end
+gem 'puma', '~> 3.0'
 gem 'pg'
+end
