@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'leaders/churchill'
 
-  get 'leaders/:id', to 'leaders#show'
+  get 'leaders/:id', to: 'leaders#show'
 
   get '/about', to: 'static#about'
 
