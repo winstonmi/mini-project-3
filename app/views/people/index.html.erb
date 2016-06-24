@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>People</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Full name</th>
+      <th>Fact</th>
+      <th>Birthdate</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <h1><i>Hipstory</i></h1> <h2>The World’s Greatest Leaders Reimagined As Hipsters</h2>
+
+    <p>
+      I’ve recently created a series of illustrations called HIPSTORY – the iconic leaders of our times seen as modern-day hipsters. I often find myself thinking about the differences between these world’s greatest leaders, their beliefs and motivations, and our self-centered generation.
+    </p>
+    <p>
+      The ‘Y’ generation is constantly looking at fashion and style as their way of self expression while steering away from the big ideologies. HIPSTORY wishes to reimagine the great leaders of modern history and place them in a different time and culture  –  ours.
+    </p>
+    <p>
+      It was not easy to illustrate all these leaders; it took me a few months to complete the project, but the effort was worth it. It is my hope that this series will encourage us to reflect: upon our leaders, our society, and ourselves.
+    </p>
+    <p>
+      HIPSTORY wishes not to criticize, but to shed new light on the way we think of ourselves and the figures who inspire us.  -Amit Shimoni
+    </p>
+
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.full_name %></td>
+        <td><%= person.fact %></td>
+        <td><%= person.birthdate %></td>
+        <td><%= person.image %></td>
+        <td><%= link_to 'Show', person %></td>
+        <td><%= link_to 'Edit', edit_person_path(person) %></td>
+        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person', new_person_path %>

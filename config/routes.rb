@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
-  root 'leaders#index'
 
-  get 'leaders/:id', to: 'leaders#show', as: "leaders"
+  get 'secret_stuff/public_page'
+
+  get 'secret_stuff/secret_page'
+
+  resources :users
+  resources :people
+
+  root 'people#index'
 
   get '/about', to: 'static#about'
 
   get '/faq', to: 'static#faq'
 
+  get 'login', to: 'sessions#new'
+  delete 'logout', to: 'sessions#destroy'
+  resources :sessions, only: [:new, :create, :destroy]
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
